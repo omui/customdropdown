@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Custom Dropdown</title>
+</head>
+<style>
+	.cdd{
+		border-top: solid 1px #979ba2;
+		border-bottom: solid 1px #979ba2;
+		z-index: 50;
+		max-width: 200px;
+		overflow: hidden;
+		font-family: "Arial";
+		font-size: 12px;
+		list-style: none;
+		color: #333;
+		padding : 0;
+		background: url("dropdown-arrow.png") no-repeat right;
+		cursor: pointer;
+		position: relative;
+	}
+	.cdd_ul{
+		list-style: none;
+		padding: 0;
+		background: #fff;
+	}
+	.cdd_selected{
+		padding: 4px 0 4px 10px;
+	}
+	.cdd_li{
+		padding: 4px 0 4px 10px;
+		border-bottom: solid 1px #979ba2;	
+	}
+	.cdd_li:hover{
+		background: #eee;
+	}
+	.cdd.clicked{
+		background: none;
+		border-bottom-style: none;
+	}
+	.cdd.clicked .cdd_ul{
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+	.cdd.clicked .cdd_li.first{
+		border-bottom: solid 1px #979ba2;
+		font-size: 15px;
+	}
+</style>
+<body>
+	<h2>Custom dropdown created from default dropdown</h2>
+	<select class="dropdown">
+		<option selected  value="">Choose</option>
+		<option value="hello">Hello</option>
+		<option value="how">How</option>
+		<option value="are">Are</option>
+		<option value="you">You!</option>
+	</select>
+</body>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="dropdown.js"></script>
+</html>
